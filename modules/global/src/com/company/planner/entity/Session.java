@@ -78,7 +78,7 @@ public class Session extends StandardEntity {
     }
 
     @Transient
-    @MetaProperty(related =, {"startDate", "duration"})
+    @MetaProperty(related = {"startDate", "duration"})
     public LocalDateTime getEndDate() {
         return (startDate != null && duration != null) ? startDate.plusHours(duration) : null;
     }
